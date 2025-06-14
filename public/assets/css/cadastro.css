@@ -1,0 +1,234 @@
+/* Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f5f7fa;
+    color: #1b2a49;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho*/
+.header {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+}
+
+.logo img {
+    width: 280px;
+    height: auto;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 3.5vw;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #1b2a49;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    color: #ff6f61;
+    font-weight: 700;
+}
+
+/* Main */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+}
+
+/* Cadastro */
+.cadastro-container {
+    background-color: white;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    max-width: 900px;
+    width: 100%;
+}
+
+.cadastro-container h2 {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: #ff6f61;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.form-cadastro {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.form-cadastro .form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-cadastro label {
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    font-size: 1rem;
+}
+
+.form-cadastro input {
+    padding: 0.55rem 0.75rem;
+    font-size: 1rem;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.form-cadastro input:focus {
+    border-color: #ff6f61;
+    outline: none;
+}
+
+.form-group textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+.form-group textarea:focus {
+    border-color: #ff6f61;
+    outline: none;
+}
+
+
+/* Botões */
+.btn-cadastrar {
+    grid-column: 1 / -1;
+    background-color: #ff6f61;
+    color: white;
+    font-weight: 600;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    justify-self: center;
+    max-width: 320px;
+}
+
+.btn-cadastrar:hover {
+    background-color: #1b2a49;
+}
+
+.btn-apagar {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-apagar:hover {
+    background-color: #1b2a49;
+}
+
+
+/* Destinos cadastrados */
+.tabela-destinos {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.tabela-destinos thead {
+    background-color: #ff6f61;
+    color: white;
+}
+
+.tabela-destinos th,
+.tabela-destinos td {
+    padding: 0.8rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+    font-size: 0.9rem;
+}
+
+.tabela-destinos tbody tr:hover {
+    background-color: #fceae7;
+}
+
+.img-tabela {
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #1b2a49;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Responsividade básica */
+@media (max-width: 600px) {
+    .navbar a {
+        font-size: 1rem;
+    }
+
+    .logo img {
+        width: 200px;
+    }
+
+    .form-cadastro {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-cadastrar {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .tabela-destinos th,
+    .tabela-destinos td {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.6rem;
+    }
+
+    .img-tabela {
+        width: 60px;
+        height: 40px;
+    }
+}

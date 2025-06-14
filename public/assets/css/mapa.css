@@ -1,0 +1,113 @@
+/* Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f4f4f4;
+    color: #1b2a49;
+    font-size: 1.6rem;
+}
+
+/* Cabeçalho*/
+.header {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+}
+
+.logo img {
+    width: 280px;
+    height: auto;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 3.5vw;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #1b2a49;
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    color: #ff6f61;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+hr {
+    border: none;
+    border-top: 0.3rem solid #1b2a49;
+    width: 20%;
+    margin: 0.5rem auto 2.5rem;
+}
+
+/* Mapa */
+main {
+    flex-grow: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.15);
+}
+
+/* Biblioteca Mapbox */
+section.apresentacao {
+    margin-top: 30px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+}
+
+section.apresentacao h2 {
+    margin-top: 0;
+    color: #ff6f61;
+}
+
+.apresentacao p {
+    color: #1b2a49;
+}
+
+.apresentacao a {
+    color: #ff6f61;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #ff6f61;
+    color: white;
+    padding: 0.8rem;
+    text-align: center;
+    font-size: 1.5rem;
+}

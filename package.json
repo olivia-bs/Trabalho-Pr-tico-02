@@ -1,0 +1,22 @@
+{
+  "name": "trabalho-pr-tico-02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "json-server --watch ./db/db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olivia-bs/Trabalho-Pr-tico-02.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/olivia-bs/Trabalho-Pr-tico-02/issues"
+  },
+  "homepage": "https://github.com/olivia-bs/Trabalho-Pr-tico-02#readme"
+}

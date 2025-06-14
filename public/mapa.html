@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Mapa Interativo - Wonderguide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/mapa.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="./img/LOGO TEXTO.png" alt="Logotipo" />
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="index.html#todos-locais">Locais</a></li>
+                <li><a href="cadastro.html">Novo Destino</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h3>Mapa de Recomendações</h3>
+            <hr />
+        <div id="map"></div>
+
+        <section class="apresentacao">
+            <h2>Sobre a Biblioteca Mapbox</h2>
+            <p>
+                &nbsp&nbsp&nbsp&nbspA <strong>Mapbox</strong> é uma biblioteca JavaScript poderosa para criar mapas
+                interativos e customizáveis para aplicações web.
+                Ela oferece diversos recursos como múltiplos estilos de mapa, controle de zoom, popups informativos, e a
+                capacidade de adicionar
+                marcadores, rotas e camadas personalizadas. Além disso, a Mapbox suporta dados geoespaciais em diversos
+                formatos, facilitando a
+                visualização dinâmica e responsiva de locais e informações geográficas.
+            </p>
+            <p>
+                &nbsp&nbsp&nbsp&nbspNeste mapa interativo, utilizamos a Mapbox para mostrar os <em>lugares
+                    recomendados</em> com marcadores e popups que exibem
+                informações essenciais de cada destino turístico. Essa ferramenta torna a experiência do usuário mais
+                envolvente e intuitiva. Para mais informações, acesse o site oficial disponível em: <a href="https://www.mapbox.com/"
+                    target="_blank" rel="noopener noreferrer">mapbox.com</a>
+            </p>
+        </section>
+    </main>
+    
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2025 Wonderguide - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoib2JzaWx2YSIsImEiOiJjbWJkeHN6ZDMxNGduMnhwbG1mMmVlNHV0In0.YNFRLK5IjT8TZfl0kTNUnQ';
+
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [20, 20],
+            zoom: 1.5
+        });
+
+        const destinosRecomendados = [
+            {
+                nome: "Cristo Redentor",
+                localizacao: "Rio de Janeiro, Brasil",
+                coordenadas: [-43.210487, -22.951916],
+            },
+            {
+                nome: "Museu do Louvre",
+                localizacao: "Paris, França",
+                coordenadas: [2.336443, 48.860611],
+            },
+            {
+                nome: "Sydney Opera House",
+                localizacao: "Sydney, Austrália",
+                coordenadas: [151.215296, -33.856784],
+            },
+            {
+                nome: "Taj Mahal",
+                localizacao: "Agra, Índia",
+                coordenadas: [78.042155, 27.175144],
+            }
+        ];
+
+        destinosRecomendados.forEach(destino => {
+            new mapboxgl.Marker()
+                .setLngLat(destino.coordenadas)
+                .setPopup(new mapboxgl.Popup({ offset: 25 })
+                    .setHTML(`<h3>${destino.nome}</h3><p>${destino.localizacao}</p>`))
+                .addTo(map);
+        });
+
+        const bounds = new mapboxgl.LngLatBounds();
+        destinosRecomendados.forEach(destino => bounds.extend(destino.coordenadas));
+        map.fitBounds(bounds, { padding: 100 });
+    </script>
+</body>
+
+</html>

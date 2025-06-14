@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wonderguide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="logo">
+            <img src="./img/LOGO TEXTO.png" alt="Logotipo">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="index.html#todos-locais">Locais</a></li>
+                <li><a href="cadastro.html">Novo Destino</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Descrição Wonderguide -->
+    <section class="intro">
+        <h1>Wonderguide</h1>
+        <h2>TE GUIANDO POR LUGARES MARAVILHOSOS</h2>
+        <p><strong>Wonderguide</strong> é o seu <strong>guia turístico digital</strong> para explorar destinos
+            deslumbrantes ao redor do mundo, indo de imponentes construções históricas, até
+            praias paradisíacas, montanhas fabulosas e encantadores museus. Cada destino é
+            uma experiência única que promete surpreender e encantar. Nossa plataforma oferece recomendações detalhadas
+            e personalizadas para que você possa <strong>descobrir, explorar e se maravilhar</strong> com os lugares
+            mais incríveis em cada canto do planeta!</p>
+
+    </section>
+
+    <main>
+        <!-- Destinos Recomendados -->
+        <section id="lugares-recomendados">
+            <h2>Lugares Recomendados</h2>
+            <div class="carrossel-wrapper">
+                <button id="btn-anterior" class="carrossel-btn">&#10094;</button>
+                <div id="recomendados-carrossel" class="carrossel-container"></div>
+                <button id="btn-proximo" class="carrossel-btn">&#10095;</button>
+            </div>
+        </section>
+        <hr id="separar">
+
+        <!-- Mapa-->
+        <section class="mapa-recomendados">
+            <h2>Mapa de Recomendações</h2>
+            <p><a href="mapa.html">Acessar Mapa</a></p>
+        </section>
+        <hr id="separar">
+
+        <!-- Todos os Locais -->
+        <section id="todos-locais">
+            <h2>Todos os Locais</h2>
+            <div id="todos-container" class="lugares-container"></div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2025 Wonderguide - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="./assets/scripts/app.js"></script>
+</body>
+
+</html>

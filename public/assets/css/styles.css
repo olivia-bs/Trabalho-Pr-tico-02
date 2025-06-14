@@ -1,0 +1,231 @@
+/* Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f4f4f4;
+    color: #1b2a49;
+}
+
+/* Cabeçalho*/
+.header {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+}
+
+.logo img {
+    width: 280px;
+    height: auto;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 3.5vw;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #1b2a49;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    color: #ff6f61;
+    font-weight: 700;
+}
+
+/* Intro */
+.intro {
+    background-color: #f5f7fa;
+    padding: 1rem 2rem 3rem;
+    text-align: center;
+}
+.intro h1 {
+    font-size: 4vw;
+    margin-bottom: 0.5rem;
+}
+.intro h2 {
+    font-size: 2vw;
+    color: #35cdc1;
+    margin-bottom: 1rem;
+}
+.intro p {
+    font-size: 1.6vw;
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+/* Lugares Recomendados e Todos os Locais */
+section {
+    padding: 1rem 2rem;
+}
+section h2 {
+    font-size: 2.5vw;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+#separar {
+    border: none;
+    border-top: 3px solid #1b2a49;
+    width: 60%;
+    margin: 1rem auto;
+}
+.lugares-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.lugar {
+    width: 90%;
+    max-width: 300px;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.lugar:hover {
+    transform: scale(1.03);
+}
+.lugar img {
+    width: 100%;
+    height: 35vh;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+}
+.lugar h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.lugar p {
+    font-size: 1.2rem;
+    color: #1b2a49;
+    padding-bottom: 0.5rem;
+}
+.lugar a {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #ff6f61;
+    text-decoration: none;
+}
+.lugar a:hover {
+    text-decoration: underline;
+}
+
+.mapa-recomendados {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.mapa-recomendados a{
+    background-color: #ff6f61;
+    color: #f4f4f4;
+    text-decoration: none;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    max-width: 30vw;
+    border-radius: 1rem;
+}
+
+.mapa-recomendados a:hover{
+    background-color: #1b2a49;
+    color: #f4f4f4;
+    text-decoration: underline;
+}
+
+
+/* Rodapé */
+.footer {
+    background-color: #ff6f61;
+    color: white;
+    padding: 0.8rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Carrossel */
+.carrossel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.carrossel-btn {
+    background-color: #ff6f61;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.carrossel-container {
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+}
+.lugar-carrossel {
+    background-color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+.lugar-carrossel img {
+    width: 100%;
+    max-height: 50vh;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.lugar-carrossel h3 {
+    font-size: 1.5rem;
+}
+.lugar-carrossel p {
+    font-size: 1.2rem;
+}
+.lugar-carrossel a {
+    font-size: 0.9rem;
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: bold;
+}
+.lugar-carrossel a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade extra */
+@media (min-width: 768px) {
+    .lugar {
+        width: 45%;
+    }
+    .lugar-carrossel img {
+        height: 350px;
+    }
+}
+@media (min-width: 1024px) {
+    .lugar {
+        width: 23%;
+    }
+    .lugar-carrossel img {
+        height: 500px;
+    }
+    .carrossel-container {
+        width: 45%;
+    }
+}
