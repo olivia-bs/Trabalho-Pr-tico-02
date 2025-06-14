@@ -149,6 +149,85 @@ section h2 {
     text-decoration: underline;
 }
 
+/* Info. do Aluno */
+#info-aluno {
+    font-size: 3.5vw;
+    text-align: center;
+    padding-top: 5vh;
+}
+
+.aluno-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.aluno-sobre,
+.aluno-outros {
+    flex: 1 1 45%;
+    min-width: 10px;
+    box-sizing: border-box;
+}
+
+.aluno-sobre{
+    padding-left: 8vw;
+}
+
+.aluno-container h1 {
+    font-size: 2rem;
+}
+
+.aluno-container p {
+    font-size: 1.5rem;
+    text-align: justify;
+    max-width: 100%;
+}
+
+.autoria-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.autoria-container h1 {
+    width: 100%;
+    margin-bottom: 1rem;
+    position: static;
+}
+
+.imagem-autoria {
+    height: auto;
+    width: 14.3rem;
+    border: #1b2a49 solid 3px;
+    border-radius: 50%;
+}
+
+#texto-autoria {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 24px;
+}
+
+.icone-insta {
+    font-size: 3rem;
+    color: #1b2a49;
+}
+
+.icone-insta:hover {
+    color: #ff6f61;
+}
 
 /* Rodapé */
 .footer {
@@ -188,7 +267,7 @@ section h2 {
 }
 .lugar-carrossel img {
     width: 100%;
-    max-height: 50vh;
+    max-height: 70vh;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1rem;
@@ -207,25 +286,4 @@ section h2 {
 }
 .lugar-carrossel a:hover {
     text-decoration: underline;
-}
-
-/* Responsividade extra */
-@media (min-width: 768px) {
-    .lugar {
-        width: 45%;
-    }
-    .lugar-carrossel img {
-        height: 350px;
-    }
-}
-@media (min-width: 1024px) {
-    .lugar {
-        width: 23%;
-    }
-    .lugar-carrossel img {
-        height: 500px;
-    }
-    .carrossel-container {
-        width: 45%;
-    }
 }
