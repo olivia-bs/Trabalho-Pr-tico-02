@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Wonderguide</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #f4f4f4;
+            color: #1b2a49;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #login {
+            width: 100%;
+            max-width: 500px;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #login h3 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.7rem;
+            font-size: 1rem;
+            border: 2px solid #1b2a49;
+            border-radius: 6px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #ff6f61;
+            outline: none;
+        }
+
+        input[type="submit"],
+        .btn-info {
+            background-color: #ff6f61;
+            color: #f4f4f4;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover,
+        .btn-info:hover {
+            background-color: #1b2a49;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        .modal-header,
+        .modal-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .close {
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="login">
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" method="post" onsubmit="loginUser (this)">
+                            <h3 class="text-center text-info">Login</h3>
+                            <div class="form-group">
+                                <label for="username" class="text-info">Usuário</label><br>
+                                <input type="text" name="username" id="username" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-info">Senha</label><br>
+                                <input type="text" name="password" id="password" class="form-control">
+                            </div>
+                            <div class="form-group text-right">
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Continuar">
+                            </div>
+                        </form>
+                    </div>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#loginModal">Novo
+                        Usuário</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Novo Usuário</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" method="post" onsubmit="loginUser (this)">
+                            <div class="form-group">
+                                <label for="login" class="text-info">Usuário</label><br>
+                                <input type="text" name="txt_login" id="txt_login" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="nome" class="text-info">Nome Completo</label><br>
+                                <input type="text" name="txt_nome" id="txt_nome" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="text-info">Email</label><br>
+                                <input type="text" name="txt_email" id="txt_email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="senha" class="text-info">Senha</label><br>
+                                <input type="password" name="txt_senha" id="txt_senha" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="senha2" class="text-info">Confirmação de Senha</label><br>
+                                <input type="password" name="txt_senha2" id="txt_senha2" class="form-control">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" id="btn_salvar" class="btn btn-info">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/scripts/login.js"></script>
+    <script>
+
+        // Declara uma função para processar o formulário de login
+        function processaFormLogin(event) {
+            // Cancela a submissão do formulário para tratar sem fazer refresh da tela
+            event.preventDefault();
+
+            // Obtem os dados de login e senha a partir do formulário de login
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Valida login e se estiver ok, redireciona para tela inicial da aplicação
+            resultadoLogin = loginUser(username, password);
+            if (resultadoLogin) {
+                window.location.href = 'index.html';
+            }
+            else { // Se login falhou, avisa ao usuário
+                alert('Usuário ou senha incorretos');
+            }
+        }
+
+        function salvaLogin(event) {
+            // Cancela a submissão do formulário para tratar sem fazer refresh da tela
+            event.preventDefault();
+
+            // Obtem os dados do formulário
+            let login = document.getElementById('txt_login').value;
+            let nome = document.getElementById('txt_nome').value;
+            let email = document.getElementById('txt_email').value;
+            let senha = document.getElementById('txt_senha').value;
+            let senha2 = document.getElementById('txt_senha2').value;
+            if (senha != senha2) {
+                alert('As senhas informadas não conferem.');
+                return
+            }
+
+            // Adiciona o usuário no banco de dados
+            addUser(nome, login, senha, email);
+            alert('Usuário salvo com sucesso. Proceda com o login para ');
+
+            // Oculta a div modal do login
+            //document.getElementById ('loginModal').style.display = 'none';
+            $('#loginModal').modal('hide');
+        }
+
+        // Associa a funçao processaFormLogin  formulário adicionado um manipulador do evento submit
+        document.getElementById('login-form').addEventListener('submit', processaFormLogin);
+
+
+        // Associar salvamento ao botao
+        document.getElementById('btn_salvar').addEventListener('click', salvaLogin);        
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
