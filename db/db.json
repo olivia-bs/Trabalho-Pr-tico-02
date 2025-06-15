@@ -203,6 +203,57 @@
       "tipo": "Construção Histórica",
       "avaliacaoMedia": 9.3,
       "recomendado": false
+    },
+    {
+      "id": "13",
+      "nome": "Complexo da Pampulha",
+      "descricaoResumida": "Conjunto arquitetônico brasileiro e modernista, reconhecido pela UNESCO.",
+      "descricao": "O Complexo da Pampulha é um conjunto de obras arquitetônicas situadas em Belo Horizonte, projetadas por Oscar Niemeyer e paisagismo de Roberto Burle Marx. Inclui a Igreja de São Francisco de Assis, o Museu de Arte da Pampulha, o Iate Tênis Clube e a Casa do Baile. É Patrimônio Mundial da UNESCO e símbolo da arquitetura modernista no Brasil.",
+      "imagem": "img/Pampulha.jpg",
+      "fotosAdicionais": [
+        "https://lh4.googleusercontent.com/proxy/fW9k7vBbLrWhun6L3YFnE8ly08pXRj4zDG_sNgb0grPyJL4h3h1aOipR-GwhQQzi17I8gNw_5zY6fgk50Bbf1ziKlyqfFhz4u81W0uClAcYI7qdjzegDc6-YwFKLtjVUSbqjrDFK7h82uWm5rJQh0F6goC45",
+        "https://vidacigana.com/wp-content/uploads/2016/12/conjunto-arquitetonico-pampulha-16.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/0/02/Olhar_sobre_a_Lagoa_da_Pampulha.jpg",
+        "https://i0.wp.com/anabaronceli.com.br/wp-content/uploads/2020/01/Captura-de-Tela-2020-01-07-%C3%A0s-17.06.19.png?resize=960%2C487&ssl=1"
+      ],
+      "localizacao": "Belo Horizonte, Brasil",
+      "tipo": "Conjunto Arquitetônico",
+      "avaliacaoMedia": 7.8,
+      "recomendado": false
+    },
+    {
+      "id": "14",
+      "nome": "Praça Vermelha",
+      "descricaoResumida": "Praça histórica conhecida pelos desfiles militares no centro de Moscou, símbolo e capital da Rússia.",
+      "descricao": "A Praça Vermelha é a praça central de Moscou, Rússia, famosa por sua importância histórica, política e cultural. É rodeada por monumentos emblemáticos como o Kremlin, a Catedral de São Basílio e o Museu Histórico Estatal. A praça é palco de grandes eventos e é um dos principais pontos turísticos da cidade.",
+      "imagem": "img/Praça-Vermelha.jpg",
+      "fotosAdicionais": [
+        "https://www.vounajanela.com/wp-content/uploads/2018/04/praca-2.jpg",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/da/f2/3e/roter-platz.jpg?w=1200&h=-1&s=1",
+        "https://todososcaminhos.com/wp-content/uploads/2020/08/IMG_0484-1024x674.jpg",
+        "https://mediaim.expedia.com/destination/1/0e133c196064a6111997fc6feac882e6.jpg"
+      ],
+      "localizacao": "Moscou, Rússia",
+      "tipo": "Construção Histórica",
+      "avaliacaoMedia": 9.5,
+      "recomendado": false
+    },
+    {
+      "id": "15",
+      "nome": "Niagara Falls",
+      "descricaoResumida": "Cachoeiras impressionantes e de beleza exuberante na fronteira entre EUA e Canadá.",
+      "descricao": "As Cataratas do Niágara são um conjunto de três quedas d'água localizadas na fronteira entre o estado de Nova York, nos EUA, e a província de Ontário, no Canadá. São famosas pela beleza natural e pela força das águas, atraindo milhões de visitantes todos os anos para atividades turísticas, passeios de barco e observação panorâmica.",
+      "imagem": "img/Niagara.jpg",
+      "fotosAdicionais": [
+        "https://cdn.britannica.com/30/94430-050-D0FC51CD/Niagara-Falls.jpg",
+        "https://cdn.britannica.com/41/129941-050-7A7D1027/Niagara-Falls-cities-River-Ontario-New-York.jpg",
+        "https://tourstoniagarafalls.com/wp-content/uploads/2025/01/Niagara-Falls-Day-and-Evening-Tour-From-Toronto.jpg",
+        "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/51000/51237-Niagara-Falls-New-York.jpg"
+      ],
+      "localizacao": "Fronteira EUA-Canadá",
+      "tipo": "Cachoeira",
+      "avaliacaoMedia": 8.9,
+      "recomendado": false
     }
   ]
 }

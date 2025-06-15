@@ -75,11 +75,15 @@ body {
 
 .card-detalhes img {
     width: 100%;
-    max-height: 40vh;
+    max-height: 60vh;
     height: auto;
     object-fit: contain;
-    border-radius: 10rem;
     margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.card-detalhes img:hover {
+    transform: scale(1.05);
 }
 
 .card-detalhes h2 {
