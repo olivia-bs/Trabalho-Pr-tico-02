@@ -1,0 +1,144 @@
+/* Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f4f4f4;
+    color: #1b2a49;
+}
+
+/* Cabeçalho*/
+.header {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+}
+
+.logo img {
+    width: 280px;
+    height: auto;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 3.5vw;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #1b2a49;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    color: #ff6f61;
+    font-weight: 700;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #ff6f61;
+    color: white;
+    padding: 0.8rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Mensagem quando não há favoritos */
+#mensagem-vazia {
+    color: #666;
+    font-style: italic;
+    padding: 7.9rem;
+}
+
+/* Favoritados */
+main {
+    flex-grow: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.favoritos-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #1b2a49;
+}
+
+.favoritos-container hr {
+    margin-bottom: 2rem;
+    border: none;
+    border-bottom: 2px solid #1b2a49;
+    width: 60px;
+}
+
+#favoritos-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+    gap: 1.8rem;
+}
+
+.lugar {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.lugar:hover {
+    transform: translateY(-6px);
+}
+
+.lugar img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.lugar h3 {
+    font-size: 1.4rem;
+    margin: 1rem;
+    color: #0c1b38;
+    flex-shrink: 0;
+}
+
+.lugar p {
+    margin: 0 1rem 1rem 1rem;
+    color: #444;
+    flex-grow: 1;
+    font-size: 1rem;
+}
+
+.lugar a {
+    margin: 0 1rem 1rem 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #ff6f61;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    align-self: flex-start;
+}g
+
+.lugar a:hover {
+    background-color: #1b2a49;
+    text-decoration: underline;
+}
+

@@ -73,18 +73,45 @@ function exibirTodosOsDestinos() {
     if (!containerTodos) return;
 
     containerTodos.innerHTML = '';
+    const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 
     destinos.forEach(destino => {
         const card = document.createElement("div");
         card.className = "lugar";
+
+        const favoritado = favoritos.includes(destino.id);
+        const icone = favoritado ? "★" : "☆";
+
         card.innerHTML = `
+            <div class="favorito-icon" data-id="${destino.id}" style="cursor:pointer; font-size: 1.5rem; text-align: right;">${icone}</div>
             <img src="${destino.imagem}" alt="${destino.nome}">
             <h3>${destino.nome}</h3>
             <p>${destino.descricaoResumida}</p>
             <a href="detalhes.html?id=${destino.id}">Saiba Mais</a>
         `;
+
+        card.querySelector(".favorito-icon").addEventListener("click", (event) => {
+            event.stopPropagation();
+            toggleFavorito(destino.id, event.target);
+        });
+
         containerTodos.appendChild(card);
     });
+}
+
+// Função para adicionar/remover favoritos
+function toggleFavorito(id, elemento) {
+    let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+
+    if (favoritos.includes(id)) {
+        favoritos = favoritos.filter(favId => favId !== id);
+        elemento.textContent = "☆";
+    } else {
+        favoritos.push(id);
+        elemento.textContent = "★";
+    }
+
+    localStorage.setItem("favoritos", JSON.stringify(favoritos));
 }
 
 // Carrossel(index.html)
@@ -112,7 +139,6 @@ function renderizarCarrossel(indice) {
 
 // Inicialização
 document.addEventListener("DOMContentLoaded", () => {
-
     if (document.getElementById("detalhes")) {
         carregarDestino();
     }

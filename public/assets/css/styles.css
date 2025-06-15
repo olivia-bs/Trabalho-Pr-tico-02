@@ -287,3 +287,30 @@ section h2 {
 .lugar-carrossel a:hover {
     text-decoration: underline;
 }
+
+/* Favoritos */
+.lugar {
+    position: relative;
+}
+
+.favorito-icon {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-size: 2.5rem;
+    color: #1b2a49;
+    user-select: none;
+    transition: color 0.3s ease;
+    z-index: 10;
+}
+
+
+.favorito-icon:hover {
+    color: #ffb700;
+    cursor: pointer;
+}
+
+.favorito-icon.active,
+.favorito-icon:focus {
+    color: #ffb700;
+}

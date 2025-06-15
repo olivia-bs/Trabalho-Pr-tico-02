@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Detalhes do Destino - Wonderguide</title>
+    <title>Favoritos - Wonderguide</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./assets/css/detalhes.css" />
+    <link rel="stylesheet" href="./assets/css/favoritos.css" />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 
@@ -18,24 +18,21 @@
         <nav class="navbar">
             <ul>
                 <li><a href="index.html">Página Inicial</a></li>
-                <li><a href="index.html#todos-locais">Locais</a></li>
+                <li><a href="favoritos.html">Favoritos</a></li>
                 <li><a href="cadastro.html">Novo Destino</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Detalhes -->
+    <!-- Favoritados -->
     <main>
-        <section class="detalhes-container">
-            <h3>Informações Gerais</h3>
+        <section class="favoritos-container">
+            <h2>Destinos Favoritados</h2>
             <hr />
-            <div id="detalhes" class="card-detalhes"></div>
-
-            <section id="fotos-destino" class="fotos-destino">
-                <h3>Fotos do Destino</h3>
-                <hr />
-                <div id="fotos-container" class="fotos-container"></div>
-            </section>
+            <div id="favoritos-lista"></div>
+            <p id="mensagem-vazia" style="display:none; text-align:center; font-size:1.2rem; margin-top:2rem;">
+                Nenhum destino favoritado.
+            </p>
         </section>
     </main>
 
@@ -44,7 +41,7 @@
         <p>&copy; 2025 Wonderguide - Todos os direitos reservados.</p>
     </footer>
 
-    <script src="./assets/scripts/app.js"></script>
+    <script src="./assets/scripts/favoritos.js"></script>
 </body>
 
 </html>
