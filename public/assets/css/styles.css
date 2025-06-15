@@ -314,3 +314,191 @@ section h2 {
 .favorito-icon:focus {
     color: #ffb700;
 }
+
+/* Responsividade - até 1024px */
+@media (max-width: 1024px) {
+  .logo img {
+    width: 220px;
+  }
+  .navbar a {
+    font-size: 1.1rem;
+  }
+  .intro h1 {
+    font-size: 6vw;
+  }
+  .intro h2 {
+    font-size: 3vw;
+  }
+  .intro p {
+    font-size: 2vw;
+  }
+  section h2 {
+    font-size: 2rem;
+  }
+  .lugar {
+    max-width: 250px;
+  }
+  .lugar img {
+    height: 35vh;
+  }
+  .mapa-recomendados a {
+    max-width: 40vw;
+    font-size: 1.1rem;
+  }
+  #info-aluno {
+    font-size: 3vw;
+  }
+  .aluno-container h1 {
+    font-size: 1.8rem;
+  }
+  .aluno-container p {
+    font-size: 1.3rem;
+  }
+  .carrossel-btn {
+    font-size: 1.8rem;
+  }
+  .lugar-carrossel h3 {
+    font-size: 1.3rem;
+  }
+  .lugar-carrossel p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Responsividade - até 768px */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .logo img {
+    width: 180px;
+  }
+  .navbar ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .navbar a {
+    font-size: 1rem;
+  }
+  .intro h1 {
+    font-size: 8vw;
+  }
+  .intro h2 {
+    font-size: 4vw;
+  }
+  .intro p {
+    font-size: 2.5vw;
+  }
+  section h2 {
+    font-size: 1.8rem;
+  }
+  .lugar {
+    max-width: 100%;
+    width: 280px;
+  }
+  .lugar img {
+    height: 30vh;
+  }
+  .mapa-recomendados a {
+    max-width: 60vw;
+    font-size: 1rem;
+  }
+  #info-aluno {
+    font-size: 2.5vw;
+    padding-top: 3vh;
+  }
+  .aluno-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .aluno-sobre, .aluno-outros {
+    flex: 1 1 100%;
+    padding-left: 0;
+  }
+  .aluno-container h1 {
+    font-size: 1.5rem;
+  }
+  .aluno-container p {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+  .carrossel-btn {
+    font-size: 1.5rem;
+    padding: 0.4rem 0.8rem;
+  }
+  .lugar-carrossel h3 {
+    font-size: 1.1rem;
+  }
+  .lugar-carrossel p {
+    font-size: 1rem;
+  }
+}
+
+/* Responsividade - até 480px */
+@media (max-width: 480px) {
+  .logo img {
+    width: 140px;
+  }
+  .navbar ul {
+    gap: 0.8rem;
+  }
+  .navbar a {
+    font-size: 0.9rem;
+  }
+  .intro h1 {
+    font-size: 10vw;
+  }
+  .intro h2 {
+    font-size: 5vw;
+  }
+  .intro p {
+    font-size: 3vw;
+    max-width: 95vw;
+  }
+  section h2 {
+    font-size: 1.5rem;
+  }
+  .lugar {
+    width: 100%;
+    max-width: none;
+  }
+  .lugar img {
+    height: 25vh;
+  }
+  .mapa-recomendados a {
+    max-width: 90vw;
+    font-size: 0.9rem;
+  }
+  #info-aluno {
+    font-size: 2vw;
+    padding-top: 2vh;
+  }
+  .aluno-container {
+    flex-direction: column;
+    padding-bottom: 2rem;
+  }
+  .aluno-sobre, .aluno-outros {
+    flex: 1 1 100%;
+    padding-left: 0;
+  }
+  .aluno-container h1 {
+    font-size: 1.3rem;
+  }
+  .aluno-container p {
+    font-size: 0.95rem;
+    max-width: 95%;
+  }
+  .carrossel-btn {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.6rem;
+  }
+  .lugar-carrossel h3 {
+    font-size: 1rem;
+  }
+  .lugar-carrossel p {
+    font-size: 0.9rem;
+  }
+}
+

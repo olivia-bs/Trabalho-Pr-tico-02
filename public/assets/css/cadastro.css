@@ -202,14 +202,42 @@ main {
     font-size: 0.9rem;
 }
 
-/* Responsividade básica */
-@media (max-width: 600px) {
-    .navbar a {
-        font-size: 1rem;
+/* Responsividade - até 1024px (notebooks) */
+@media (max-width: 1024px) {
+    .navbar ul {
+        gap: 2.5vw;
+    }
+
+    .form-cadastro {
+        gap: 1rem;
+    }
+
+    .cadastro-container {
+        padding: 2rem;
+    }
+}
+
+/* Responsividade - até 768px (tablets) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
     }
 
     .logo img {
-        width: 200px;
+        width: 220px;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 2vw;
+    }
+
+    .cadastro-container {
+        padding: 1.5rem;
     }
 
     .form-cadastro {
@@ -217,14 +245,44 @@ main {
     }
 
     .btn-cadastrar {
+        font-size: 1.1rem;
+    }
+
+    .tabela-destinos th,
+    .tabela-destinos td {
+        font-size: 0.85rem;
+    }
+
+    .img-tabela {
+        width: 70px;
+        height: 45px;
+    }
+}
+
+/* Responsividade - até 600px (smartphones) */
+@media (max-width: 600px) {
+    .navbar a {
+        font-size: 1rem;
+    }
+
+    .logo img {
+        width: 180px;
+    }
+
+    .cadastro-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn-cadastrar {
         max-width: 100%;
         width: 100%;
+        font-size: 1rem;
     }
 
     .tabela-destinos th,
     .tabela-destinos td {
         font-size: 0.8rem;
-        padding: 0.5rem 0.6rem;
+        padding: 0.5rem;
     }
 
     .img-tabela {
